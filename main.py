@@ -41,7 +41,7 @@ def cut_HanLP():
 def cut_jieba():
     fileName = "wordOut.txt"
     resName = "result.txt"
-    source = codecs.open(fileName, 'r')
+    source = codecs.open(fileName, 'r', encoding='utf-8')
     if os.path.exists(resName):
         os.remove(resName)
     result = codecs.open(resName, 'w', encoding='utf-8')
@@ -91,5 +91,6 @@ def cut_LTP():
 
 
 if __name__ == '__main__':
-    cut_LTP()
+    # cut_LTP()
     # cut_HanLP()
+    cut_jieba()
